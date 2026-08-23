@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Shopping Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <header>
+            <h1>Shopping List</h1>
+            <p>Tap the mic and say "Add milk" or "Find apples under $5"</p>
+        </header>
+
+        <!-- Smart Suggestions Bar -->
+        <div id="suggestions-container" class="suggestions-container hidden">
+            <h3><i class="fa-solid fa-lightbulb"></i> Smart Suggestions</h3>
+            <div id="suggestions-list" class="suggestions-list">
+                <!-- Suggestions injected here -->
+            </div>
+        </div>
+
+        <div class="mic-container">
+            <button id="mic-btn" class="mic-btn">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <div id="status-text" class="status-text">Tap to speak...</div>
+        </div>
+
+        <div id="feedback-toast" class="feedback-toast hidden">
+            <span id="toast-message"></span>
+        </div>
+
+        <!-- Categorized List -->
+        <div class="list-container">
+            <div id="empty-state" class="empty-state">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your shopping list is empty.</p>
+            </div>
+            
+            <div id="shopping-categories" class="shopping-categories">
+                <!-- Categories and items injected here dynamically -->
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
